@@ -11,14 +11,14 @@
 
     gtag('config', 'G-5Z8P25E2DF');
   </script> -->
-  <title>{{ site.title }}</title>
+  <title>Alexander Timans</title>
 
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <meta name="author" content="{{ site.title }}" />
+  <meta name="author" content="Alexander Timans" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="canonical" href="http://localhost:4000/">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
     type="text/css">
 </head>
@@ -287,53 +287,236 @@
 
         <table
           style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'research' %}
+          
+          
+          
           <tr>
 
             <td style="padding:2.5%;width:60%;vertical-align:middle">
-              <h4>{{post.title}}</h4>
+              <h4>Fast yet Safe: Early-Exiting with Risk Control</h4>
               <br>
-              {{post.authors}}
+              Metod Jazbec*, <strong>Alexander Timans*</strong>, Tin Hadzi Veljkovic, Kaspar Sakmann, Dan Zhang, Christian A. Naesseth, Eric Nalisnick
               <br>
               <br>
-              {% if post.venue %}
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+              
+              <em>ICML Workshops on Structured Probabilistic Inference and Generative Modelling (SPIGM) and Efficient Systems for Foundation Models (ES-FOMO)</em>, 2024
               <br>
-              {% endif %}
-              {% if post.note %}
-              <em>{{post.note}}</em>
+              
+              
+              <em>*Equal contribution</em>
               <br>
-              {% endif %}
+              
               Links:
-              {% if post.paper %}
-              <a href="{{post.paper}}" target="_blank">Paper</a>
-              {% endif %}
-              {% if post.code %}
-              | <a href="{{post.code}}" target="_blank">Code</a>
-              {% endif %}
-              {% if post.poster %}
-              | <a href="{{post.poster}}" target="_blank">Poster</a>
-              {% endif %}
-              {% if post.video %}
-              | <a href="{{post.video}}" target="_blank">Video</a>
-              {% endif %}
-              {% if post.slides %}
-              | <a href="{{post.slides}}" target="_blank">Slides</a>
-              {% endif %}
-              {{ post.excerpt }}
+              
+              <a href="https://arxiv.org/abs/2405.20915" target="_blank">Paper</a>
+              
+              
+              | <a href="https://github.com/metodj/RC-EENN" target="_blank">Code</a>
+              
+              
+              | <a href="docs/rceenn_icml24.pdf" target="_blank">Poster</a>
+              
+              
+              
+              <p>We investigate how to adapt frameworks of risk control to early-exit neural networks, providing a distribution-free, post-hoc solution that tunes the EENN’s exiting mechanism so that exits only occur when the output is guaranteed to satisfy user-specified performance goals.</p>
+
             </td>
 
             <td style="padding:2.5%;width:40%;vertical-align:middle;text-align: center;">
-              <img src="{{post.image}}" alt="project image"
+              <img src="/images/rceenn.png" alt="project image"
                 style="width:auto; height:auto; max-width:110%; max-height: 110%;" />
             </td>
 
           </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
+          
+          
+          
+          
+          
+          <tr>
+
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <h4>Adaptive Bounding Box Uncertainties via Two-Step Conformal Prediction</h4>
+              <br>
+              <strong>Alexander Timans</strong>, Christoph-Nikolas Straehle, Kaspar Sakmann, Eric Nalisnick
+              <br>
+              <br>
+              
+              <em>European Conference on Computer Vision (ECCV)</em>, 2024
+              <br>
+              
+              
+              Links:
+              
+              <a href="https://arxiv.org/pdf/2403.07263" target="_blank">Paper</a>
+              
+              
+              | <a href="https://github.com/alextimans/conformal-od" target="_blank">Code</a>
+              
+              
+              
+              
+              <p>We propose a two-step conformal approach that propagates uncertainty in predicted class labels into the uncertainty intervals of bounding boxes. This broadens the validity of conformal coverage guarantees to include incorrectly classified objects. This work builds on our workshop paper.</p>
+
+            </td>
+
+            <td style="padding:2.5%;width:40%;vertical-align:middle;text-align: center;">
+              <img src="/images/conformalbbtwostep.png" alt="project image"
+                style="width:auto; height:auto; max-width:110%; max-height: 110%;" />
+            </td>
+
+          </tr>
+          
+          
+          
+          
+          
+          <tr>
+
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <h4>Conformal time series decomposition with component-wise exchangeability</h4>
+              <br>
+              Derck Prinzhorn, Thijmen Nijdam, Putri van der Linden, <strong>Alexander Timans</strong>
+              <br>
+              <br>
+              
+              <em>Conformal and Probabilistic Prediction with Applications (COPA)</em>, 2024
+              <br>
+              
+              
+              Links:
+              
+              <a href="https://arxiv.org/abs/2406.16766" target="_blank">Paper</a>
+              
+              
+              | <a href="https://github.com/dweprinz/CP-TSD" target="_blank">Code</a>
+              
+              
+              
+              
+              <p>We present a novel use of conformal prediction for time series forecasting that incorporates time series decomposition, allowing us to customize employed methods to account for the different exchangeability regimes underlying each time series component.</p>
+
+            </td>
+
+            <td style="padding:2.5%;width:40%;vertical-align:middle;text-align: center;">
+              <img src="/images/cptsd.png" alt="project image"
+                style="width:auto; height:auto; max-width:110%; max-height: 110%;" />
+            </td>
+
+          </tr>
+          
+          
+          
+          
+          
+          <tr>
+
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <h4>A powerful rank-based correction to multiple testing under positive dependency</h4>
+              <br>
+              <strong>Alexander Timans</strong>, Christoph-Nikolas Straehle, Kaspar Sakmann, Eric Nalisnick
+              <br>
+              <br>
+              
+              <em>Preprint (arXiv)</em>, 2023
+              <br>
+              
+              
+              Links:
+              
+              <a href="https://arxiv.org/abs/2311.10900" target="_blank">Paper</a>
+              
+              
+              
+              
+              
+              <p>We suggest a multiple testing correction for settings of testing under positive dependency of the hypotheses. The suggested max-rank algorithm is based on rank permutations and suitable for multiple testing issues arising in settings of conformal prediction.</p>
+
+            </td>
+
+            <td style="padding:2.5%;width:40%;vertical-align:middle;text-align: center;">
+              <img src="/images/maxrank.png" alt="project image"
+                style="width:auto; height:auto; max-width:110%; max-height: 110%;" />
+            </td>
+
+          </tr>
+          
+          
+          
+          
+          
+          <tr>
+
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <h4>Adaptive Bounding Box Uncertainty via Conformal Prediction</h4>
+              <br>
+              <strong>Alexander Timans</strong>, Christoph-Nikolas Straehle, Kaspar Sakmann, Eric Nalisnick
+              <br>
+              <br>
+              
+              <em>ICCV Workshop on Uncertainty Quantification for Computer Vision</em>, 2023
+              <br>
+              
+              
+              Links:
+              
+              <a href="docs/conformalbbox_uncv23.pdf" target="_blank">Paper</a>
+              
+              
+              
+              
+              
+              <p>We quantify the uncertainty in multi-object 2D bounding box predictions via conformal prediction, producing tight prediction intervals with guaranteed per-class coverage for the bounding box coordinates.</p>
+
+            </td>
+
+            <td style="padding:2.5%;width:40%;vertical-align:middle;text-align: center;">
+              <img src="/images/conformalbbox2.jpg" alt="project image"
+                style="width:auto; height:auto; max-width:110%; max-height: 110%;" />
+            </td>
+
+          </tr>
+          
+          
+          
+          
+          
+          <tr>
+
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <h4>Uncertainty Quantification for Image-based Traffic Prediction across Cities</h4>
+              <br>
+              <strong>Alexander Timans</strong>, Nina Wiedemann, Nishant Kumar, Ye Hong, Martin Raubal
+              <br>
+              <br>
+              
+              <em>Preprint (arXiv)</em>, 2023
+              <br>
+              
+              
+              Links:
+              
+              <a href="https://arxiv.org/abs/2308.06129" target="_blank">Paper</a>
+              
+              
+              | <a href="https://github.com/alextimans/traffic4cast-uncertainty/tree/main" target="_blank">Code</a>
+              
+              
+              
+              
+              <p>We explore different uncertainty quantification methods on a large-scale image-based <a href="https://www.iarai.ac.at/traffic4cast/2021-competition/challenge/">traffic dataset</a> spanning multiple cities and time periods, originally featured as a <a href="https://arxiv.org/abs/2203.17070">NeurIPS 2021 prediction challenge</a>. Meaningful uncertainty relating to traffic dynamics is recovered by a combination method of deep ensembles and patch-based deviations. In a case study, we demonstrate how uncertainty estimates can be employed for unsupervised outlier detection on traffic behaviour.</p>
+
+            </td>
+
+            <td style="padding:2.5%;width:40%;vertical-align:middle;text-align: center;">
+              <img src="/images/traffic4cast.png" alt="project image"
+                style="width:auto; height:auto; max-width:110%; max-height: 110%;" />
+            </td>
+
+          </tr>
+          
+          
+          
         </table>
 
         <!-- TALKS -->
@@ -350,40 +533,31 @@
         <!-- <table
           style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'talk' %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h2>{{post.title}}</h2>
-              <br>
-              {% if post.venue_link %}
-              <h3><a href={{post.venue_link}}>{{post.venue}}</a></h3>
-              {% else %}
-              <h3>{{post.venue}}</h3>
-              {% endif %}
-              , {{ post.date | date: "%Y" }}
-              <br>
-              {% if post.info %}
-              <em>{{post.info}}</em>
-              <br>
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
         </table> -->
 
         <!-- SOURCE -->
