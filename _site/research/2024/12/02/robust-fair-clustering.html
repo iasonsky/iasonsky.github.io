@@ -56,7 +56,7 @@
             <sub-sec>About Me</sub-sec>
             <hr class="subsec-hr">
             <p>
-              AI Master's student at the <a href="https://www.uva.nl/en">University of Amsterdam</a> with a focus on causality and machine learning. Currently researching causal bandits, developing frameworks that can learn optimal interventions when both the causal structure is unknown and some variables cannot be directly manipulated, under supervision of Assistant Professor <a href="https://saramagliacane.github.io/">Sara Magliacane</a> and PhD candidate <a href="https://roelhulsman.github.io/">Roel Hulsman</a>.
+              AI Master's student at the <a href="https://www.uva.nl/en">University of Amsterdam</a> with a focus on causality and machine learning. Currently researching <a href="https://causalai.net/r36.pdf">causal bandits</a>, developing frameworks that can learn optimal interventions when both the causal structure is unknown and some variables cannot be directly manipulated, under supervision of Assistant Professor <a href="https://saramagliacane.github.io/">Sara Magliacane</a> and PhD candidate <a href="https://roelhulsman.github.io/">Roel Hulsman</a>.
               </p>
               <p>
               With a background in Computer Science, I bring a hands-on approach to machine learning research, bridging theoretical advances with practical implementations. My industry experience as a software engineer at Twiki Solutions includes leading data-driven services and developing AI solutions for logistics applications.
@@ -71,19 +71,55 @@
 
             <td style="padding:2.5%;width:35%;max-width:40%; vertical-align: middle;">
               <img style="width:100%;max-width:100%;border: 1.5px solid black;border-radius: 20%; margin-top: 30px;" 
-                   alt="profile photo" src="images/iason_linkedin.jpeg">
+                   alt="profile photo" src="images/profile-pic.jpeg">
             </td>      
           </tr>
         </table>
 
         <!-- RESEARCH -->
         <div style="padding: 2.5%;">
-          <sub-sec style="margin: 0; padding: 0;">Publications</sub-sec>
+          <sub-sec style="margin: 0; padding: 0;">Research Projects</sub-sec>
           <hr class="subsec-hr">
         </div>
         
         <table
           style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          
+          
+          
+          <tr>
+
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <paper-title>(Even More) Efficient Equivariant Transfer Learning from Pretrained Models</paper-title>
+              <br>
+              Mikhail Vlasenko, Ádám Divák, <strong>Iason Skylitsis</strong>, Milan Miletić, Zoe Tzifa-Kratira
+              <br>
+              <br>
+              
+              
+              Links:
+              
+              
+              <a href="https://github.com/iasonsky/EfficientEquivariantTransferLearning/blob/main/Blogpost.md" target="_blank">Blogpost</a>
+              
+              
+              | <a href="https://github.com/iasonsky/EfficientEquivariantTransferLearning" target="_blank">Code</a>
+              
+              
+              
+              
+              <p>Reproduced and extended the original paper by Basu et al. (2023), verifying results across missing experiments and expanding the discussion on the weight patterns learned by λ‑equitune. Proposed and implemented equiattention, an extension utilizing an Attention layer to potentially improve performance over λ‑equitune.</p>
+
+            </td>
+
+            <td style="padding:2.5%;width:40%;vertical-align:middle;text-align: center;">
+              <img src="/images/publications/equivariant-transfer-learning.png" alt="project image"
+                style="width:auto; height:auto; max-width:110%; max-height: 110%;" />
+            </td>
+
+          </tr>
+          
+          
           
           
           
@@ -105,9 +141,12 @@
               <a href="https://openreview.net/forum?id=H1hLNjwrGy" target="_blank">Paper</a>
               
               
+              
               | <a href="https://github.com/iasonsky/Repro-RobustFairClustering" target="_blank">Code</a>
               
               
+              
+              | <a href="https://slideslive.com/39025656" target="_blank">Video</a>
               
               
               <p>Reproduced and extended the ICLR’23 paper by Chhabra et al., refining the codebase, introducing additional metrics and datasets, and exploring novel attack strategies. Conducted comprehensive evaluations, including targeted attacks and an ablation study, to validate original claims and broaden the research landscape.</p>
@@ -116,6 +155,74 @@
 
             <td style="padding:2.5%;width:40%;vertical-align:middle;text-align: center;">
               <img src="/images/publications/robust_fair_clustering.png" alt="project image"
+                style="width:auto; height:auto; max-width:110%; max-height: 110%;" />
+            </td>
+
+          </tr>
+          
+          
+          
+          
+          
+          <tr>
+
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <paper-title>Deep Learning and Explainable Artificial Intelligence Techniques for Alzheimer's Disease Detection on MRI</paper-title>
+              <br>
+              <strong>Iason Skylitsis</strong>, Athanasios Voulodimos, Eftychios Protopapadakis
+              <br>
+              <br>
+              
+              
+              Links:
+              
+              
+              
+              
+              
+              
+              <p>Developed an Alzheimer’s disease detection framework using deep learning, transfer learning, and explainable AI on 2180 MRI images from the ADNI dataset. Implemented a comprehensive preprocessing pipeline and improved model explainability with Grad‑CAM.</p>
+
+            </td>
+
+            <td style="padding:2.5%;width:40%;vertical-align:middle;text-align: center;">
+              <img src="/images/publications/alzheimers-detection.png" alt="project image"
+                style="width:auto; height:auto; max-width:110%; max-height: 110%;" />
+            </td>
+
+          </tr>
+          
+          
+          
+          
+          
+          <tr>
+
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <paper-title>Evaluation of Supervision in Deep Learning Networks for Accelerated-MRI Reconstruction</paper-title>
+              <br>
+              <strong>Iason Skylitsis</strong>, Dimitrios Karkalousos, Matthan W. A. Caan
+              <br>
+              <br>
+              
+              
+              Links:
+              
+              <a href="docs/Iason_Skylitsis_AMC_Internship_Report.pdf" target="_blank">Paper</a>
+              
+              
+              
+              | <a href="https://github.com/wdika/mridc" target="_blank">Code</a>
+              
+              
+              
+              
+              <p>Investigated the efficiency and reconstruction quality of different supervised and self-supervised methods for Magnetic Resonance Imaging (MRI) reconstruction. Extensively compared a pre-trained Cascades of Independently Recurrent Inference Machines (CIRIM) to various methods including Noise2Recon, SSDU, U-Net, ResNet, and traditional Compressed Sensing approaches.</p>
+
+            </td>
+
+            <td style="padding:2.5%;width:40%;vertical-align:middle;text-align: center;">
+              <img src="/images/publications/mri-reconstruction.png" alt="project image"
                 style="width:auto; height:auto; max-width:110%; max-height: 110%;" />
             </td>
 

@@ -56,7 +56,7 @@
             <sub-sec>About Me</sub-sec>
             <hr class="subsec-hr">
             <p>
-              AI Master's student at the <a href="https://www.uva.nl/en">University of Amsterdam</a> with a focus on causality and machine learning. Currently researching causal bandits, developing frameworks that can learn optimal interventions when both the causal structure is unknown and some variables cannot be directly manipulated, under supervision of Assistant Professor <a href="https://saramagliacane.github.io/">Sara Magliacane</a> and PhD candidate <a href="https://roelhulsman.github.io/">Roel Hulsman</a>.
+              AI Master's student at the <a href="https://www.uva.nl/en">University of Amsterdam</a> with a focus on causality and machine learning. Currently researching <a href="https://causalai.net/r36.pdf">causal bandits</a>, developing frameworks that can learn optimal interventions when both the causal structure is unknown and some variables cannot be directly manipulated, under supervision of Assistant Professor <a href="https://saramagliacane.github.io/">Sara Magliacane</a> and PhD candidate <a href="https://roelhulsman.github.io/">Roel Hulsman</a>.
               </p>
               <p>
               With a background in Computer Science, I bring a hands-on approach to machine learning research, bridging theoretical advances with practical implementations. My industry experience as a software engineer at Twiki Solutions includes leading data-driven services and developing AI solutions for logistics applications.
@@ -71,14 +71,14 @@
 
             <td style="padding:2.5%;width:35%;max-width:40%; vertical-align: middle;">
               <img style="width:100%;max-width:100%;border: 1.5px solid black;border-radius: 20%; margin-top: 30px;" 
-                   alt="profile photo" src="images/iason_linkedin.jpeg">
+                   alt="profile photo" src="images/profile-pic.jpeg">
             </td>      
           </tr>
         </table>
 
         <!-- RESEARCH -->
         <div style="padding: 2.5%;">
-          <sub-sec style="margin: 0; padding: 0;">Publications</sub-sec>
+          <sub-sec style="margin: 0; padding: 0;">Research Projects</sub-sec>
           <hr class="subsec-hr">
         </div>
         
@@ -106,6 +106,9 @@
               Links:
               {% if post.paper %}
               <a href="{{post.paper}}" target="_blank">Paper</a>
+              {% endif %}
+              {% if post.blogpost %}
+              <a href="{{post.blogpost}}" target="_blank">Blogpost</a>
               {% endif %}
               {% if post.code %}
               | <a href="{{post.code}}" target="_blank">Code</a>

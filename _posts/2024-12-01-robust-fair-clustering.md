@@ -11,7 +11,7 @@ venue: "Transactions on Machine Learning Research (TMLR)"
 paper: https://openreview.net/forum?id=H1hLNjwrGy
 code: https://github.com/iasonsky/Repro-RobustFairClustering
 # poster: add poster
-# video: 
+video: https://slideslive.com/39025656
 # slides: add slides
 ---
 
