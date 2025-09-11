@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head> 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC4D4CQQNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-PC4D4CQQNS');
+  </script> 
+
+  <!-- Meta website info -->
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Iason Skylitsis" />
+  <meta name="description" content="Iason Skylitsiss personal website" />
+
+  <!-- Title and settings -->
+  <title>{{ page.title }} - Iason Skylitsis</title> 
+
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="canonical" href="https://iasonsky.github.io">
+
+  <!-- Check icons here: https://favicon.io/ -->
+  <link rel="icon" href="/images/favicon-sparkles.png">
+  <!-- Check fonts here: https://fonts.google.com/ -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|family=Quicksand:400,700|Inconsolata:400,700|Oswald:400&display=swap" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="blogpost-container">
+
+<article class="blogpost">
+  <header class="blogpost-header">
+    <h1 class="blogpost-title">{{ page.title }}</h1>
+    <div class="blogpost-meta">
+      <span class="blogpost-date">{{ page.date | date: "%B %d, %Y" }}</span>
+      {% if page.authors %}
+      <span class="blogpost-authors">{{ page.authors }}</span>
+      {% endif %}
+    </div>
+    {% if page.image %}
+    <div class="blogpost-image">
+      <img src="{{ page.image }}" alt="{{ page.title }}" />
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="blogpost-content">
+    {{ content }}
+  </div>
+
+  <footer class="blogpost-footer">
+    <div class="blogpost-links">
+      {% if page.paper %}
+      <a href="{{ page.paper }}" target="_blank" class="blogpost-link">Paper</a>
+      {% endif %}
+      {% if page.code %}
+      <a href="{{ page.code }}" target="_blank" class="blogpost-link">Code</a>
+      {% endif %}
+      {% if page.poster %}
+      <a href="{{ page.poster }}" target="_blank" class="blogpost-link">Poster</a>
+      {% endif %}
+      {% if page.video %}
+      <a href="{{ page.video }}" target="_blank" class="blogpost-link">Video</a>
+      {% endif %}
+      {% if page.slides %}
+      <a href="{{ page.slides }}" target="_blank" class="blogpost-link">Slides</a>
+      {% endif %}
+    </div>
+  </footer>
+</article>
+
+<style>
+.blogpost-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.blogpost {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.blogpost-header {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.blogpost-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #2c3e50;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.blogpost-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.blogpost-date {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.blogpost-authors {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.blogpost-image {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.blogpost-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.blogpost-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.blogpost-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem 0;
+  color: #2c3e50;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.blogpost-content h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 1.8rem 0 0.8rem 0;
+  color: #34495e;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.blogpost-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.6rem 0;
+  color: #34495e;
+}
+
+.blogpost-content p {
+  margin: 1rem 0;
+  text-align: justify;
+}
+
+.blogpost-content ul, .blogpost-content ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.blogpost-content li {
+  margin: 0.5rem 0;
+}
+
+.blogpost-content blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  background-color: #f8f9fa;
+  border-left: 4px solid #007bff;
+  font-style: italic;
+}
+
+.blogpost-content code {
+  background-color: #f1f3f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Inconsolata', monospace;
+  font-size: 0.9em;
+}
+
+.blogpost-content pre {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid #e9ecef;
+}
+
+.blogpost-content pre code {
+  background-color: transparent;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+.blogpost-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95em;
+}
+
+.blogpost-content th,
+.blogpost-content td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.blogpost-content th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.blogpost-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.blogpost-content .math {
+  text-align: center;
+  margin: 1.5rem 0;
+  font-size: 1.1em;
+}
+
+.blogpost-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #eee;
+}
+
+.blogpost-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.blogpost-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.blogpost-link:hover {
+  background-color: #0056b3;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .blogpost {
+    padding: 1rem;
+  }
+  
+  .blogpost-title {
+    font-size: 2rem;
+  }
+  
+  .blogpost-content {
+    font-size: 1rem;
+  }
+  
+  .blogpost-links {
+    flex-direction: column;
+  }
+}
+</style>
+
+  </div>
+</body>
+</html>
