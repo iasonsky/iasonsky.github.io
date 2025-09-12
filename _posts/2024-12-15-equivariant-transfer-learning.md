@@ -13,7 +13,7 @@ code: https://github.com/iasonsky/EfficientEquivariantTransferLearning
 # poster: 
 # video: 
 # slides: 
-blogpost: /blogpost/2024/12/16/equivariant-transfer-learning-blogpost.html
+blogpost: https://github.com/iasonsky/EfficientEquivariantTransferLearning/blob/main/Blogpost.md
 ---
 
 Reproduced and extended the original paper by Basu et al. (2023), verifying results across missing experiments and expanding the discussion on the weight patterns learned by λ‑equitune. Proposed and implemented equiattention, an extension utilizing an Attention layer to potentially improve performance over λ‑equitune.

@@ -8,11 +8,11 @@ author: "Iason Skylitsis"
 authors: <strong>Iason Skylitsis</strong>, Dimitrios Karkalousos, Matthan W. A. Caan
 # venue: 
 # note: 
-paper: docs/Iason_Skylitsis_AMC_Internship_Report.pdf
+paper: docs/mri-reconstruction-internship-report.pdf
 code: https://github.com/wdika/mridc
 # poster: 
 # video: 
-# slides: 
+slides: docs/mri-reconstruction-presentation.pdf
 # blogpost: 
 ---
 
