@@ -117,9 +117,9 @@
             {% for post in site.posts %}
             {% for cat in post.categories %}
             {% if cat == 'research' %}
-            <tr>
+            <tr style="margin-bottom: 40px;">
 
-              <td style="padding:0;width:60%;vertical-align:middle;padding-right:20px;">
+              <td style="padding:0;padding-bottom:40px;width:55%;vertical-align:middle;padding-right:25px;">
                 <paper-title>{{post.title}}</paper-title>
                 <br>
                 {{post.authors}}
@@ -155,9 +155,9 @@
                 {{ post.excerpt }}
               </td>
 
-              <td style="padding:0;width:40%;vertical-align:middle;text-align: center;padding-left:20px;">
+              <td style="padding:0;padding-bottom:40px;width:45%;vertical-align:middle;text-align: center;padding-left:25px;">
                 <img src="{{post.image}}" alt="project image"
-                  style="width:auto; height:auto; max-width:110%; max-height: 110%;" />
+                  style="width:100%; height:auto; max-width:100%;" />
               </td>
 
             </tr>
