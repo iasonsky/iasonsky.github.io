@@ -1,19 +1,19 @@
 ---
 ---
 
-// -------------------
-// STYLE FILE
-// -------------------
+/* -------------------
+   STYLE FILE
+   ------------------- */
 
-// -------------------
-// Available fonts
-// "Noto Sans", sans-serif;
-// "Quicksand", sans-serif;
-// "Inconsolata", monospace;
-// "Roboto Mono", monospace;
-// -------------------
+/* -------------------
+   Available fonts
+   "Noto Sans", sans-serif;
+   "Quicksand", sans-serif;
+   "Inconsolata", monospace;
+   "Roboto Mono", monospace;
+   ------------------- */
 
-// Hyperlinks
+/* Hyperlinks */
 a {
   color: #4d1af3;
   text-decoration: none;
@@ -29,27 +29,27 @@ a {
   font-display: auto;
 }
 
-// Other text
+/* Other text */
 body,
 td,
 th,
 tr,
 
-// Main body text
+/* Main body text */
 p {
   font-family: "Noto Sans", sans-serif;
   font-size: 13px;
   font-display: auto;
 } 
 
-// Bold text
+/* Bold text */
 b {
   font-family: "Noto Sans", sans-serif;
   font-size: 13px;
   font-display: auto;
 }
 
-// Title text
+/* Title text */
 main {
   font-family: "Noto Sans", monospace;
   font-size: 36px;
@@ -63,7 +63,7 @@ main {
   margin-right: 0px;
 }
 
-// Subsec text
+/* Subsec text */
 sub-sec {
   font-family: "Noto Sans", monospace;
   font-size: 26px;
@@ -74,7 +74,7 @@ sub-sec {
   display:inline; 
 }
 
-// Paper title text
+/* Paper title text */
 paper-title {
   font-family: "Noto Sans", sans-serif;
   font-size: 20px;
@@ -85,7 +85,7 @@ paper-title {
   display:inline; 
 }
 
-// Subsec lines
+/* Subsec lines */
 .subsec-hr {
   border: none;
   border-top: 2px solid #4d1af3; /* Matches your purple link color */
@@ -93,15 +93,15 @@ paper-title {
   width: 50px; /* Shorter, more elegant */
 }
 
-// About section styling
+/* About section styling */
 .about-content {
   text-align: left;
   max-width: 600px;
   margin: 0 auto;
 }
 
-// -------------------
-// Scrollbar styling
+/* -------------------
+   Scrollbar styling */
 
 #scroll {
   white-space: normal;
@@ -136,4 +136,4 @@ paper-title {
   background: #555555; /* Color of the scrollbar thumb on hover */
 }
 
-// -------------------
+/* ------------------- */
