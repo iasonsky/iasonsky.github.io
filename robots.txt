@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://iasonsky.github.io/sitemap.xml
+
+# Disallow private directories
+Disallow: /_site/
+Disallow: /_layouts/
+Disallow: /_posts/
+Disallow: /_sass/
+Disallow: /_config.yml
+Disallow: /Gemfile
+Disallow: /Gemfile.lock

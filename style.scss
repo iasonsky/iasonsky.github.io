@@ -40,7 +40,7 @@ p {
   font-family: "Noto Sans", sans-serif;
   font-size: 13px;
   font-display: auto;
-}
+} 
 
 // Bold text
 b {
@@ -91,6 +91,13 @@ paper-title {
   border-top: 2px solid #4d1af3; /* Matches your purple link color */
   margin: 25px 0;
   width: 50px; /* Shorter, more elegant */
+}
+
+// About section styling
+.about-content {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 // -------------------
