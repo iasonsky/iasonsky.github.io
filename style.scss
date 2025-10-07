@@ -41,6 +41,8 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
 }
 
 /* Hyperlinks */
@@ -129,6 +131,100 @@ paper-title {
   text-align: left;
   max-width: 750px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  /* Make main container responsive */
+  .main-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 10px !important;
+  }
+  
+  /* Adjust profile photo for mobile */
+  .profile-photo {
+    width: 150px !important;
+    max-width: 150px !important;
+    margin-bottom: 15px !important;
+  }
+  
+  /* Stack project content vertically on mobile */
+  .project-row {
+    display: block !important;
+  }
+  
+  .project-text, .project-image {
+    width: 100% !important;
+    padding: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .project-image {
+    text-align: center !important;
+    margin-bottom: 30px !important;
+    display: block !important;
+  }
+  
+  .project-image img {
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Adjust font sizes for mobile */
+  main {
+    font-size: 28px !important;
+  }
+  
+  sub-sec {
+    font-size: 22px !important;
+  }
+  
+  paper-title {
+    font-size: 18px !important;
+  }
+  
+  /* Adjust dark mode toggle for mobile */
+  .theme-toggle {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  /* Improve link spacing on mobile */
+  .project-links {
+    margin-top: 15px;
+  }
+  
+  /* Adjust about content padding */
+  .about-content {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+  
+  /* Ensure all images are responsive */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Fix project row layout */
+  .project-row td {
+    display: block !important;
+    width: 100% !important;
+    padding: 10px 0 !important;
+  }
 }
 
 /* Dark mode toggle button */

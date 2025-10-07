@@ -101,7 +101,7 @@
     });
   </script>
 
-  <table
+  <table class="main-container"
     style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
@@ -112,7 +112,7 @@
           <tr style="padding:0px">
             <td style="padding:2.5%;width:100%;vertical-align:top;text-align:center;">
               <!-- Profile Photo -->
-              <img style="width:200px;max-width:200px;border: 1.5px solid var(--border-color);border-radius: 20%; margin-bottom: 20px;" 
+              <img class="profile-photo" style="width:200px;max-width:200px;border: 1.5px solid var(--border-color);border-radius: 20%; margin-bottom: 20px;" 
                    alt="profile photo" src="images/iason_linkedin.jpeg">
               
               <!-- Name -->
@@ -163,9 +163,9 @@
             {% for post in site.posts %}
             {% for cat in post.categories %}
             {% if cat == 'research' %}
-            <tr style="margin-bottom: 40px;">
+            <tr class="project-row" style="margin-bottom: 40px;">
 
-              <td style="padding:0;padding-bottom:40px;width:50%;vertical-align:middle;padding-right:25px;">
+              <td class="project-text" style="padding:0;padding-bottom:40px;width:50%;vertical-align:middle;padding-right:25px;">
                 <paper-title>{{post.title}}</paper-title>
                 <br>
                 {{post.authors}}
@@ -201,7 +201,7 @@
                 {{ post.excerpt }}
               </td>
 
-              <td style="padding:0;padding-bottom:60px;width:50%;vertical-align:middle;text-align: center;padding-left:30px;">
+              <td class="project-image" style="padding:0;padding-bottom:60px;width:50%;vertical-align:middle;text-align: center;padding-left:30px;">
                 <img src="{{post.image}}" alt="{{post.title}}"
                   style="width:100%; height:auto; max-width:100%;" />
               </td>
