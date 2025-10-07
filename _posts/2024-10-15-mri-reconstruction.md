@@ -16,4 +16,8 @@ slides: docs/mri-reconstruction-presentation.pdf
 # blogpost: 
 ---
 
-Investigated the efficiency and reconstruction quality of different supervised and self-supervised methods for Magnetic Resonance Imaging (MRI) reconstruction. Extensively compared a pre-trained Cascades of Independently Recurrent Inference Machines (CIRIM) to various methods including Noise2Recon, SSDU, U-Net, ResNet, and traditional Compressed Sensing approaches.
+<ul>
+  <li>Investigated the efficiency and reconstruction quality of different supervised and self-supervised methods for MRI reconstruction</li>
+  <li>Extensively compared pre-trained CIRIM to various methods including Noise2Recon, SSDU, U-Net, ResNet, and traditional Compressed Sensing approaches</li>
+  <li>Evaluated trade-offs between training efficiency and reconstruction quality</li>
+</ul>

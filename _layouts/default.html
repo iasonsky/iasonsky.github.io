@@ -21,14 +21,14 @@
   <!-- Open Graph / Social Media Meta Tags -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://iasonsky.github.io" />
-  <meta property="og:title" content="Iason Skylitsis - AI Researcher" />
+  <meta property="og:title" content="Iason Skylitsis" />
   <meta property="og:description" content="AI Master's student at University of Amsterdam researching causal bandits and machine learning." />
   <meta property="og:image" content="https://iasonsky.github.io/images/iason_linkedin.jpeg" />
   
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:url" content="https://iasonsky.github.io" />
-  <meta name="twitter:title" content="Iason Skylitsis - AI Researcher" />
+  <meta name="twitter:title" content="Iason Skylitsis" />
   <meta name="twitter:description" content="AI Master's student at University of Amsterdam researching causal bandits and machine learning." />
   <meta name="twitter:image" content="https://iasonsky.github.io/images/iason_linkedin.jpeg" />
 
@@ -74,8 +74,35 @@
 </head>
 
 <body>
+  <!-- Dark Mode Toggle -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+    <span id="theme-icon">🌙</span>
+  </button>
+
+  <script>
+    // Dark mode toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const html = document.documentElement;
+    
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', currentTheme);
+    themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+    
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', () => {
+      const theme = html.getAttribute('data-theme');
+      const newTheme = theme === 'light' ? 'dark' : 'light';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    });
+  </script>
+
   <table
-    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
 
@@ -85,7 +112,7 @@
           <tr style="padding:0px">
             <td style="padding:2.5%;width:100%;vertical-align:top;text-align:center;">
               <!-- Profile Photo -->
-              <img style="width:200px;max-width:200px;border: 1.5px solid black;border-radius: 20%; margin-bottom: 20px;" 
+              <img style="width:200px;max-width:200px;border: 1.5px solid var(--border-color);border-radius: 20%; margin-bottom: 20px;" 
                    alt="profile photo" src="images/iason_linkedin.jpeg">
               
               <!-- Name -->
@@ -101,9 +128,9 @@
                 <a href="https://github.com/iasonsky">GitHub</a> &nbsp; | &nbsp;
                 <a href="docs/Iason_Skylitsis_Resume.pdf" target="_blank">CV</a>
               </p>
-              <p style="text-align: center; font-size: 11px;">
-                Last updated: September 2025
-              </p>
+               <p style="text-align: center; font-size: 11px;">
+                 Last updated: October 2025
+               </p>
               
               <!-- About Me Section -->
               <div class="about-content">
@@ -138,7 +165,7 @@
             {% if cat == 'research' %}
             <tr style="margin-bottom: 40px;">
 
-              <td style="padding:0;padding-bottom:40px;width:55%;vertical-align:middle;padding-right:25px;">
+              <td style="padding:0;padding-bottom:40px;width:50%;vertical-align:middle;padding-right:25px;">
                 <paper-title>{{post.title}}</paper-title>
                 <br>
                 {{post.authors}}
@@ -157,25 +184,25 @@
                 <a href="{{post.paper}}" target="_blank">Paper</a>
                 {% endif %}
                 {% if post.blogpost %}
-                <a href="{{post.blogpost}}" target="_blank">Blogpost</a>
+                {% if post.paper %}| {% endif %}<a href="{{post.blogpost}}" target="_blank">Blogpost</a>
                 {% endif %}
                 {% if post.code %}
-                | <a href="{{post.code}}" target="_blank">Code</a>
+                {% if post.paper or post.blogpost %}| {% endif %}<a href="{{post.code}}" target="_blank">Code</a>
                 {% endif %}
                 {% if post.poster %}
-                | <a href="{{post.poster}}" target="_blank">Poster</a>
+                {% if post.paper or post.blogpost or post.code %}| {% endif %}<a href="{{post.poster}}" target="_blank">Poster</a>
                 {% endif %}
                 {% if post.video %}
-                | <a href="{{post.video}}" target="_blank">Video</a>
+                {% if post.paper or post.blogpost or post.code or post.poster %}| {% endif %}<a href="{{post.video}}" target="_blank">Video</a>
                 {% endif %}
                 {% if post.slides %}
-                | <a href="{{post.slides}}" target="_blank">Slides</a>
+                {% if post.paper or post.blogpost or post.code or post.poster or post.video %}| {% endif %}<a href="{{post.slides}}" target="_blank">Slides</a>
                 {% endif %}
                 {{ post.excerpt }}
               </td>
 
-              <td style="padding:0;padding-bottom:40px;width:45%;vertical-align:middle;text-align: center;padding-left:25px;">
-                <img src="{{post.image}}" alt="project image"
+              <td style="padding:0;padding-bottom:60px;width:50%;vertical-align:middle;text-align: center;padding-left:30px;">
+                <img src="{{post.image}}" alt="{{post.title}}"
                   style="width:100%; height:auto; max-width:100%;" />
               </td>
 

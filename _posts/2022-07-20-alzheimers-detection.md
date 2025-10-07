@@ -16,4 +16,8 @@ paper: docs/alzheimers-detection-thesis.pdf
 # blogpost: 
 ---
 
-Developed an Alzheimer's disease detection framework using deep learning, transfer learning, and explainable AI on 2180 MRI images from the ADNI dataset. Implemented a comprehensive preprocessing pipeline and improved model explainability with Grad‑CAM.
+<ul>
+  <li>Developed an Alzheimer's disease detection framework using deep learning and transfer learning on 2180 MRI images from the ADNI dataset</li>
+  <li>Implemented a comprehensive preprocessing pipeline for MRI data</li>
+  <li>Improved model explainability using Grad‑CAM visualization techniques</li>
+</ul>
