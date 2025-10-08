@@ -3,12 +3,44 @@
 
 <head> 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC4D4CQQNS"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N00MDVHP0"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);} 
     gtag('js', new Date());
-    gtag('config', 'G-PC4D4CQQNS');
+    gtag('config', 'G-4N00MDVHP0', {
+      // Enhanced tracking configuration
+      page_title: document.title,
+      page_location: window.location.href,
+      send_page_view: true
+    });
+
+    // Track dark mode usage
+    function trackThemeChange(theme) {
+      gtag('event', 'theme_change', {
+        'event_category': 'UI',
+        'event_label': theme,
+        'value': 1
+      });
+    }
+
+    // Track project clicks
+    function trackProjectClick(projectName, linkType) {
+      gtag('event', 'project_interaction', {
+        'event_category': 'Research',
+        'event_label': projectName + '_' + linkType,
+        'value': 1
+      });
+    }
+
+    // Track external link clicks
+    function trackExternalLink(url) {
+      gtag('event', 'external_link_click', {
+        'event_category': 'Outbound',
+        'event_label': url,
+        'value': 1
+      });
+    }
   </script> 
 
   <!-- Meta website info -->
@@ -115,6 +147,11 @@
       html.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme); // Save user's manual choice
       themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+      
+      // Track theme change
+      if (typeof trackThemeChange === 'function') {
+        trackThemeChange(newTheme);
+      }
     });
   </script>
 
@@ -200,22 +237,22 @@
                 {% endif %}
                 Links:
                 {% if post.paper %}
-                <a href="{{post.paper}}" target="_blank">Paper</a>
+                <a href="{{post.paper}}" target="_blank" onclick="trackProjectClick('{{post.title}}', 'paper')">Paper</a>
                 {% endif %}
                 {% if post.blogpost %}
-                {% if post.paper %}| {% endif %}<a href="{{post.blogpost}}" target="_blank">Blogpost</a>
+                {% if post.paper %}| {% endif %}<a href="{{post.blogpost}}" target="_blank" onclick="trackProjectClick('{{post.title}}', 'blogpost')">Blogpost</a>
                 {% endif %}
                 {% if post.code %}
-                {% if post.paper or post.blogpost %}| {% endif %}<a href="{{post.code}}" target="_blank">Code</a>
+                {% if post.paper or post.blogpost %}| {% endif %}<a href="{{post.code}}" target="_blank" onclick="trackProjectClick('{{post.title}}', 'code')">Code</a>
                 {% endif %}
                 {% if post.poster %}
-                {% if post.paper or post.blogpost or post.code %}| {% endif %}<a href="{{post.poster}}" target="_blank">Poster</a>
+                {% if post.paper or post.blogpost or post.code %}| {% endif %}<a href="{{post.poster}}" target="_blank" onclick="trackProjectClick('{{post.title}}', 'poster')">Poster</a>
                 {% endif %}
                 {% if post.video %}
-                {% if post.paper or post.blogpost or post.code or post.poster %}| {% endif %}<a href="{{post.video}}" target="_blank">Video</a>
+                {% if post.paper or post.blogpost or post.code or post.poster %}| {% endif %}<a href="{{post.video}}" target="_blank" onclick="trackProjectClick('{{post.title}}', 'video')">Video</a>
                 {% endif %}
                 {% if post.slides %}
-                {% if post.paper or post.blogpost or post.code or post.poster or post.video %}| {% endif %}<a href="{{post.slides}}" target="_blank">Slides</a>
+                {% if post.paper or post.blogpost or post.code or post.poster or post.video %}| {% endif %}<a href="{{post.slides}}" target="_blank" onclick="trackProjectClick('{{post.title}}', 'slides')">Slides</a>
                 {% endif %}
                 {{ post.excerpt }}
               </td>
