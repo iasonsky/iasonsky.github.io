@@ -1,6 +1,18 @@
 #
 # This file contains configuration flags to customize your site
 #
+
+# Site settings
+url: "https://iasonsky.github.io"
+baseurl: ""
+
+# Jekyll settings
+timezone: Europe/Amsterdam
+
+# Sitemap plugin settings
+plugins:
+  - jekyll-sitemap
+
 collections:
   updates:
     output: false
