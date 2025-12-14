@@ -5,7 +5,7 @@ date:   2025-01-15 23:59:59 +00:00
 image: /images/publications/visual-concept-fusion.png
 categories: research
 author: "Iason Skylitsis"
-authors: Agata Żywot, <strong>Iason Skylitsis</strong>, Thijmen Nijdam, Zoe Tzifa-Kratira, Derck W. E. Prinzhorn, Konrad Szewczyk
+authors: Agata Żywot, <strong>Iason Skylitsis</strong>, Thijmen Nijdam, Zoe Tzifa-Kratira, Derck W. E. Prinzhorn, Konrad Szewczyk, Aritra Bhowmik 
 # venue: 
 # note: 
 paper: docs/visual-concept-fusion-report.pdf
