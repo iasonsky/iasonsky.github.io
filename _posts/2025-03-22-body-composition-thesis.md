@@ -5,7 +5,7 @@ date:   2025-03-22 23:59:59 +00:00
 image: /images/publications/body-composition-thesis.png
 categories: research
 author: "Iason Skylitsis"
-authors: <strong>Iason Skylitsis</strong>, supervised by Dr. Dimitrios Karkalousos
+authors: <strong>Iason Skylitsis</strong>, Dimitrios Karkalousos
 note: Ongoing Thesis Research
 # paper: 
 # code: 
