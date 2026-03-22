@@ -6,8 +6,7 @@ image: /images/publications/body-composition-thesis.png
 categories: research
 author: "Iason Skylitsis"
 authors: <strong>Iason Skylitsis</strong>, supervised by Dr. Dimitrios Karkalousos
-venue: QurAI, Amsterdam UMC
-note: Thesis
+note: Ongoing Thesis Research
 # paper: 
 # code: 
 # poster: 
