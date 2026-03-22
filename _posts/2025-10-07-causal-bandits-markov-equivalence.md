@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Structural Causal Bandits with Non-Manipulative Variables under Markov Equivalence"
+title:  "Towards Structural Causal Bandits with Non-Manipulable Variables and Unknown Causal Structure"
 date:   2025-01-15 23:59:59 +00:00
 image: /images/publications/causal-bandits-markov-equivalance.png
 categories: research
 author: "Iason Skylitsis"
 authors: <strong>Iason Skylitsis</strong>, Roel Hulsman, Sara Magliacane
 # venue: 
-note: Ongoing Research
-# paper: 
-# code: https://github.com/iasonsky/causal-discovery-bandits
+# note: Ongoing Research
+paper: docs/causal-bandits-paper.pdf
+code: https://github.com/iasonsky/causal-discovery-bandits
 # poster: 
 # video: 
 # slides: 
