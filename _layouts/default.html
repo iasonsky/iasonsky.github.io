@@ -90,13 +90,10 @@
     })();
   </script>
 
-  <!-- Favicons for different platforms -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-causality.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-causality.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-causality.png">
-  <link rel="shortcut icon" href="/images/favicon-causality.png">
-  <link rel="icon" type="image/png" href="/images/favicon-causality.png">
+  <!-- Favicons: SVG for modern browsers, ICO fallback, PNG for iOS home screen -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
   
   <!-- Check fonts here: https://fonts.google.com/ -->
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|family=Quicksand:400,700|Inconsolata:400,700|Oswald:400&display=swap|Lexend:400,700&display=swap" rel="stylesheet" type="text/css">
@@ -283,7 +280,7 @@
               </td>
 
               <td class="project-image" style="padding:0;padding-bottom:60px;width:50%;vertical-align:middle;text-align: center;padding-left:30px;">
-                <img src="{{post.image}}" alt="{{post.title}}"
+                <img src="{{post.image}}" alt="{{post.title}}" loading="lazy" decoding="async"
                   style="width:100%; height:auto; max-width:100%;" />
               </td>
 
