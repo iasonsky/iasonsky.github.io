@@ -37,6 +37,21 @@
   --subsec-bg: transparent;
 }
 
+/* Fallback: respect the browser's color scheme when JS hasn't set an
+   explicit data-theme yet (e.g. JS disabled). The inline head script
+   normally sets data-theme before paint, which takes precedence. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --link-color: #8b7cff;
+    --link-hover-color: #ffa864;
+    --border-color: #e0e0e0;
+    --hr-color: #8b7cff;
+    --subsec-bg: transparent;
+  }
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);

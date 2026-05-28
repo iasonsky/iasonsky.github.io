@@ -77,6 +77,19 @@
   <link rel="stylesheet" type="text/css" href="style.css" />
   <link rel="canonical" href="https://iasonsky.github.io">
 
+  <!-- Set theme before paint to avoid a flash of the wrong color scheme.
+       Uses the saved preference if any, otherwise the browser setting. -->
+  <script>
+    (function () {
+      function getSystemTheme() {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      var savedTheme = localStorage.getItem('theme');
+      var currentTheme = savedTheme || getSystemTheme();
+      document.documentElement.setAttribute('data-theme', currentTheme);
+    })();
+  </script>
+
   <!-- Favicons for different platforms -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-causality.png">
@@ -125,19 +138,11 @@
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
     const html = document.documentElement;
-    
-    // Function to get system preference
-    function getSystemTheme() {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    
-    // Check for saved theme preference, otherwise use system preference
-    const savedTheme = localStorage.getItem('theme');
-    const currentTheme = savedTheme || getSystemTheme();
-    
-    html.setAttribute('data-theme', currentTheme);
-    themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
-    
+
+    // The initial data-theme is set by the inline script in <head> (based on
+    // the saved preference, otherwise the browser setting). Sync the icon to it.
+    themeIcon.textContent = html.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+
     // Listen for system theme changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
       // Only update if user hasn't manually set a preference
@@ -192,7 +197,7 @@
                 <a href="docs/Iason_Skylitsis_Resume.pdf" target="_blank">CV</a>
               </p>
                <p style="text-align: center; font-size: 11px;">
-                 Last updated: March 2026
+                 Last updated: {{ site.time | date: "%B %Y" }}
                </p>
               
               <!-- About Me Section -->

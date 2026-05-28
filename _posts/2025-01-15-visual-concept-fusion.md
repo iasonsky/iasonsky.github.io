@@ -8,7 +8,7 @@ author: "Iason Skylitsis"
 authors: Agata Żywot, <strong>Iason Skylitsis</strong>, Thijmen Nijdam, Zoe Tzifa-Kratira, Derck W. E. Prinzhorn, Konrad Szewczyk, Aritra Bhowmik 
 # venue: 
 # note: 
-paper: docs/visual-concept-fusion-report.pdf
+paper: https://arxiv.org/abs/2605.25191
 code: https://github.com/thijmennijdam/stable-diffusion-v2
 poster: docs/visual-concept-fusion-poster.pdf
 # video: 
