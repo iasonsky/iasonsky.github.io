@@ -1,0 +1,58 @@
+---
+layout: null
+permalink: /404.html
+---
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Page not found - Iason Skylitsis</title>
+
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+
+  <!-- Set theme before paint to avoid a flash of the wrong color scheme. -->
+  <script>
+    (function () {
+      function getSystemTheme() {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || getSystemTheme());
+    })();
+  </script>
+
+  <!-- Favicons: SVG for modern browsers, ICO fallback, PNG for iOS home screen -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Lexend:400,700&display=swap" rel="stylesheet" type="text/css">
+
+  <style>
+    .notfound {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .notfound main { font-size: 64px; }
+    .notfound p { margin: 10px 0 24px; }
+  </style>
+</head>
+
+<body>
+  <div class="notfound">
+    <main>404</main>
+    <p>This page doesn't exist (or moved).</p>
+    <p><a href="/">&larr; Back to home</a></p>
+  </div>
+</body>
+
+</html>
