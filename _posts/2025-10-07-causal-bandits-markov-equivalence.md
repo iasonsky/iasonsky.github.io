@@ -5,7 +5,10 @@ date:   2025-01-15 23:59:59 +00:00
 image: /images/publications/causal-bandits-markov-equivalance.png
 categories: research
 author: "Iason Skylitsis"
-authors: <strong>Iason Skylitsis</strong>, Roel Hulsman, Sara Magliacane
+authors: Iason Skylitsis
+supervisors:
+  - "Sara Magliacane"
+  - "Roel Hoelsman"
 # venue: 
 # note: Ongoing Research
 paper: docs/causal-bandits-paper.pdf

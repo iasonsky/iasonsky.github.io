@@ -247,6 +247,10 @@
                 <paper-title>{{post.title}}</paper-title>
                 <br>
                 {{post.authors}}
+                {% if post.supervisors %}
+                <br>
+                <small>Supervisors: {{ post.supervisors | join: ", " }}</small>
+                {% endif %}
                 <br>
                 <br>
                 {% if post.venue %}

@@ -44,6 +44,9 @@
       {% if page.authors %}
       <span class="blogpost-authors">{{ page.authors }}</span>
       {% endif %}
+      {% if page.supervisors %}
+      <span class="blogpost-supervisors">Supervisors: {{ page.supervisors | join: ", " }}</span>
+      {% endif %}
     </div>
     {% if page.image %}
     <div class="blogpost-image">
