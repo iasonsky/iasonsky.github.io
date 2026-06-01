@@ -5,7 +5,10 @@ date:   2022-07-20 23:59:59 +00:00
 image: /images/publications/alzheimers-detection.png
 categories: research
 author: "Iason Skylitsis"
-authors: <strong>Iason Skylitsis</strong>, Athanasios Voulodimos, Eftychios Protopapadakis
+authors: Iason Skylitsis
+supervisors:
+  - "Athanasios Voulodimos"
+  - "Eftychios Protopapadakis"
 # venue: 
 # note: Project
 paper: docs/alzheimers-detection-thesis.pdf
