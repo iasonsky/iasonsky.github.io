@@ -14,7 +14,7 @@ show_in_research_projects: false
 ---
 
 <ul>
-  <li>Decouples episodic sampling from metric learning to study class-balanced batch construction for CT body composition segmentation</li>
-  <li>Compares episodic, random, and weighted sampling across full-data, low-data, and matched-budget training regimes on the SAROS dataset</li>
-  <li>Shows that training iteration budget is a critical confound when evaluating sampling strategies in class-imbalanced segmentation</li>
+  <li>Decoupled episodic sampling from metric learning to study class-balanced batch construction for CT body composition segmentation</li>
+  <li>Compared episodic, random, and weighted sampling across full-data, low-data, and matched-budget training regimes on the SAROS dataset</li>
+  <li>Showed that training iteration budget is a critical confound when evaluating sampling strategies in class-imbalanced segmentation</li>
 </ul>
