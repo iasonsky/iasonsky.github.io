@@ -8,7 +8,7 @@ author: "Iason Skylitsis"
 authors: Iason Skylitsis
 supervisors:
   - "Sara Magliacane"
-  - "Roel Hoelsman"
+  - "Roel Hulsman"
 # venue: 
 # note: Ongoing Research
 paper: docs/causal-bandits-paper.pdf
