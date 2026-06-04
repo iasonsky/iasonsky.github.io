@@ -8,7 +8,7 @@ author: "Iason Skylitsis"
 authors: <strong>Iason Skylitsis</strong>, Dimitrios Karkalousos, Ivana Išgum
 venue: "Greeks in AI"
 note: Paper from my ongoing thesis
-paper: https://arxiv.org/abs/2605.20405
+paper: https://openreview.net/forum?id=As9JBSxf34
 code: https://github.com/iasonsky/episodic-sampling
 show_in_research_projects: false
 ---
