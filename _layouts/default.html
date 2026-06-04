@@ -235,12 +235,14 @@
         <div class="about-content">
           <sub-sec>Research Projects</sub-sec>
           <hr class="subsec-hr">
+          {% assign thesis_paper_post = site.posts | where_exp: "post", "post.slug == 'disentangling-sampling-training-budget-class-imbalanced-ct-body-composition-segmentation'" | first %}
           
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             {% for post in site.posts %}
             {% for cat in post.categories %}
             {% if cat == 'research' %}
+            {% unless post.show_in_research_projects == false %}
             <tr class="project-row" style="margin-bottom: 40px;">
 
               <td class="project-text" style="padding:0;padding-bottom:40px;width:50%;vertical-align:middle;padding-right:25px;">
@@ -291,6 +293,59 @@
               </td>
 
             </tr>
+            {% if post.slug == 'body-composition-thesis' and thesis_paper_post %}
+            <tr class="project-row" style="margin-bottom: 40px;">
+
+              <td class="project-text" style="padding:0;padding-bottom:40px;width:50%;vertical-align:middle;padding-right:25px;">
+                <paper-title>{{thesis_paper_post.title}}</paper-title>
+                <br>
+                {{thesis_paper_post.authors}}
+                {% if thesis_paper_post.supervisors %}
+                <br>
+                <small>Supervisors: {{ thesis_paper_post.supervisors | join: ", " }}</small>
+                {% endif %}
+                <br>
+                <br>
+                {% if thesis_paper_post.venue %}
+                <em>{{thesis_paper_post.venue}}</em>, {{ thesis_paper_post.date | date: "%Y" }}
+                <br>
+                {% endif %}
+                {% if thesis_paper_post.note %}
+                <em>{{thesis_paper_post.note}}</em>
+                <br>
+                {% endif %}
+                {% if thesis_paper_post.paper or thesis_paper_post.blogpost or thesis_paper_post.code or thesis_paper_post.poster or thesis_paper_post.video or thesis_paper_post.slides %}
+                Links:
+                {% if thesis_paper_post.paper %}
+                <a href="{{thesis_paper_post.paper}}" target="_blank" onclick="trackProjectClick('{{thesis_paper_post.title}}', 'paper')">Paper</a>
+                {% endif %}
+                {% if thesis_paper_post.blogpost %}
+                {% if thesis_paper_post.paper %}| {% endif %}<a href="{{thesis_paper_post.blogpost}}" target="_blank" onclick="trackProjectClick('{{thesis_paper_post.title}}', 'blogpost')">Blogpost</a>
+                {% endif %}
+                {% if thesis_paper_post.code %}
+                {% if thesis_paper_post.paper or thesis_paper_post.blogpost %}| {% endif %}<a href="{{thesis_paper_post.code}}" target="_blank" onclick="trackProjectClick('{{thesis_paper_post.title}}', 'code')">Code</a>
+                {% endif %}
+                {% if thesis_paper_post.poster %}
+                {% if thesis_paper_post.paper or thesis_paper_post.blogpost or thesis_paper_post.code %}| {% endif %}<a href="{{thesis_paper_post.poster}}" target="_blank" onclick="trackProjectClick('{{thesis_paper_post.title}}', 'poster')">Poster</a>
+                {% endif %}
+                {% if thesis_paper_post.video %}
+                {% if thesis_paper_post.paper or thesis_paper_post.blogpost or thesis_paper_post.code or thesis_paper_post.poster %}| {% endif %}<a href="{{thesis_paper_post.video}}" target="_blank" onclick="trackProjectClick('{{thesis_paper_post.title}}', 'video')">Video</a>
+                {% endif %}
+                {% if thesis_paper_post.slides %}
+                {% if thesis_paper_post.paper or thesis_paper_post.blogpost or thesis_paper_post.code or thesis_paper_post.poster or thesis_paper_post.video %}| {% endif %}<a href="{{thesis_paper_post.slides}}" target="_blank" onclick="trackProjectClick('{{thesis_paper_post.title}}', 'slides')">Slides</a>
+                {% endif %}
+                {% endif %}
+                {{ thesis_paper_post.excerpt }}
+              </td>
+
+              <td class="project-image" style="padding:0;padding-bottom:60px;width:50%;vertical-align:middle;text-align: center;padding-left:30px;">
+                <img src="{{thesis_paper_post.image}}" alt="{{thesis_paper_post.title}}" loading="lazy" decoding="async"
+                  style="width:100%; height:auto; max-width:100%;" />
+              </td>
+
+            </tr>
+            {% endif %}
+            {% endunless %}
             {% endif %}
             {% endfor %}
             {% endfor %}
