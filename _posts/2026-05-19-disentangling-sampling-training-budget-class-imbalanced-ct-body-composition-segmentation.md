@@ -6,7 +6,7 @@ image: /images/publications/disentangling-paper.png
 categories: research
 author: "Iason Skylitsis"
 authors: <strong>Iason Skylitsis</strong>, Dimitrios Karkalousos, Ivana Išgum
-venue: "Greeks in AI 2026"
+venue: "Greeks in AI"
 note: Paper from my ongoing thesis
 paper: https://arxiv.org/abs/2605.20405
 code: https://github.com/iasonsky/episodic-sampling
