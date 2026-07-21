@@ -219,7 +219,7 @@
                   Previously I researched <a href="https://causalai.net/r36.pdf">causal bandits</a>, under supervision of Assistant Professor <a href="https://saramagliacane.github.io/">Sara Magliacane</a> and PhD candidate <a href="https://roelhulsman.github.io/">Roel Hulsman</a>, developing frameworks that can learn optimal interventions when both the causal structure is unknown and some variables cannot be directly manipulated.
                   </p>
                   <p>
-                  With a background in Computer Science, I bring a hands-on approach to machine learning research, bridging theoretical advances with practical implementations. My industry experience as a software engineer at <a href="https://twiki-solutions.com/">Twiki Solutions</a> included leading data-driven services and deploying an ETA prediction model for production logistics systems.
+                  With a background in Computer Science, I bring a hands-on approach to machine learning research, bridging theoretical advances with practical implementations. My industry experience as a software engineer at <a href="https://twiki-solutions.com/">Twiki Solutions</a> included leading data-driven services and deploying an ETA prediction model for production logistics systems. Outside research, I build and ship side projects, from hackathon products to an open-source tool for students; see <a href="#building">Building</a> below.
                   </p>
                   <p>
                   My <strong>research interests</strong> span causality, representation learning, and applied ML. I'm particularly drawn to problems that require both theoretical rigor and practical implementation—developing methods that advance our understanding while solving meaningful challenges.
@@ -350,6 +350,93 @@
             {% endfor %}
             {% endfor %}
           </table>
+        </div>
+
+        <!-- BUILDING -->
+        <div class="research-section-start"></div>
+        <div class="about-content" id="building">
+          <sub-sec>Building</sub-sec>
+          <hr class="subsec-hr">
+          <p style="opacity: 0.8; margin-bottom: 20px;">
+            Products and tools I ship outside research.
+          </p>
+
+          <div class="build-grid">
+
+            <!-- MegaMinds -->
+            <div class="build-card">
+              <div class="build-card-head">
+                <span class="build-dot r"></span><span class="build-dot y"></span><span class="build-dot g"></span>
+                megaminds.base44.app
+              </div>
+              <div class="build-card-body">
+                <span class="build-title">MegaMinds</span>
+                <div class="build-event">Megathon Hackathon &middot; Amsterdam &middot; Jun 2026</div>
+                <p>
+                  An online platform that teaches young students the fundamentals of AI, taken from idea to a
+                  deployed web app in 48 hours with a four-person team. Validated live during the hackathon:
+                  15+ user interviews, 10+ product iterations, 50+ signups, and 5 paying users.
+                </p>
+                <div class="build-stack">
+                  <span>Base44</span><span>Claude</span>
+                </div>
+                <div class="build-links">
+                  <a href="https://megaminds.base44.app/" target="_blank" onclick="trackProjectClick('MegaMinds', 'demo')">Live app</a> |
+                  <a href="https://megathon.xyz/" target="_blank" onclick="trackProjectClick('MegaMinds', 'event')">Event</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Orbit -->
+            <div class="build-card">
+              <div class="build-card-head">
+                <span class="build-dot r"></span><span class="build-dot y"></span><span class="build-dot g"></span>
+                orbit &middot; hack-europe-2026
+              </div>
+              <div class="build-card-body">
+                <span class="build-title">Orbit</span>
+                <div class="build-event">{Tech: Europe} London AI Hackathon &middot; Attio track &middot; Jun 2026</div>
+                <p>
+                  A voice-first real-estate lead engine: a buyer talks to a voice agent for 90 seconds and
+                  receives a WhatsApp message with matched London listings and a scheduled callback, no human
+                  in the loop. I owned the n8n orchestration: trigger on the call, rank listings, send the
+                  WhatsApp, and log the lead back to Attio.
+                </p>
+                <div class="build-stack">
+                  <span>n8n</span><span>Attio</span><span>Gemini</span><span>TypeScript</span>
+                </div>
+                <div class="build-links">
+                  <a href="https://github.com/pa06lak/hack-europe-2026" target="_blank" onclick="trackProjectClick('Orbit', 'code')">Code</a> |
+                  <a href="https://luma.com/londonhack" target="_blank" onclick="trackProjectClick('Orbit', 'event')">Event</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- canvas-dl -->
+            <div class="build-card">
+              <div class="build-card-head">
+                <span class="build-dot r"></span><span class="build-dot y"></span><span class="build-dot g"></span>
+                iasonsky/canvas-dl
+              </div>
+              <div class="build-card-body">
+                <span class="build-title">canvas-dl</span>
+                <div class="build-event">Open source &middot; CLI + GUI</div>
+                <p>
+                  A tool that downloads and organises all course files from the Canvas LMS in seconds:
+                  parallel downloads, PDF merging, and a GUI, packaged so anyone can run it with a single
+                  command. Started as a script for a friend; built three times over, each version with a new
+                  generation of AI-assisted development.
+                </p>
+                <div class="build-stack">
+                  <span>Python</span>
+                </div>
+                <div class="build-links">
+                  <a href="https://github.com/iasonsky/canvas-dl" target="_blank" onclick="trackProjectClick('canvas-dl', 'code')">Code</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         <!-- SOURCE -->

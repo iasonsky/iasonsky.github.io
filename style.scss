@@ -25,6 +25,10 @@
   --border-color: #000000;
   --hr-color: #4d1af3;
   --subsec-bg: transparent;
+  --card-bg: #fafafa;
+  --card-head-bg: #f0f0f0;
+  --card-edge: #d8d8d8;
+  --card-edge-hover: #ababab;
 }
 
 [data-theme="dark"] {
@@ -35,6 +39,10 @@
   --border-color: #e0e0e0;
   --hr-color: #8b7cff;
   --subsec-bg: transparent;
+  --card-bg: #202020;
+  --card-head-bg: #272727;
+  --card-edge: #3a3a3a;
+  --card-edge-hover: #666666;
 }
 
 /* Fallback: respect the browser's color scheme when JS hasn't set an
@@ -49,6 +57,10 @@
     --border-color: #e0e0e0;
     --hr-color: #8b7cff;
     --subsec-bg: transparent;
+    --card-bg: #202020;
+    --card-head-bg: #272727;
+    --card-edge: #3a3a3a;
+    --card-edge-hover: #666666;
   }
 }
 
@@ -161,6 +173,96 @@ paper-title {
 
 .research-section-start {
   margin-top: 60px;
+}
+
+/* Building section — terminal-window project cards */
+.build-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.build-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-edge);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.build-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--card-edge-hover);
+  box-shadow: 0 12px 28px -14px rgba(0, 0, 0, 0.4);
+}
+
+.build-card-head {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--card-head-bg);
+  border-bottom: 1px solid var(--card-edge);
+  padding: 8px 12px;
+  font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--text-color);
+  opacity: 0.75;
+}
+
+.build-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.build-dot.r { background: #ff5f57; }
+.build-dot.y { background: #febc2e; }
+.build-dot.g { background: #28c840; }
+
+.build-card-body {
+  padding: 16px 18px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.build-title {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.build-event {
+  font-size: 12.5px;
+  margin-top: 3px;
+  opacity: 0.65;
+}
+
+.build-card-body p {
+  font-size: 13.5px;
+  margin: 10px 0 14px;
+  flex: 1;
+}
+
+.build-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.build-stack span {
+  font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+  font-size: 11px;
+  color: var(--link-color);
+  border: 1px solid var(--card-edge);
+  border-radius: 3px;
+  padding: 1px 7px;
 }
 
 /* Mobile Responsive Design */
