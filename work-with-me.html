@@ -1,0 +1,322 @@
+---
+layout: null
+permalink: /work-with-me/
+---
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Iason Skylitsis" />
+  <meta name="description" content="Skylitsis Labs: independent AI engineering. Retrieval-augmented and LLM systems, machine learning in production, built by Iason Skylitsis in Amsterdam." />
+  <meta name="keywords" content="AI engineer, freelance, RAG, LLM, machine learning, Amsterdam, consultant, Skylitsis Labs" />
+  <title>Work with me &mdash; Skylitsis Labs</title>
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://iasonsky.github.io/work-with-me/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Work with me &mdash; Skylitsis Labs">
+  <meta property="og:description" content="Independent AI engineering. Retrieval-augmented and LLM systems, machine learning in production.">
+  <meta property="og:url" content="https://iasonsky.github.io/work-with-me/">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N00MDVHP0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4N00MDVHP0');
+    function trackContact(method) {
+      gtag('event', 'contact_interaction', {
+        'event_category': 'WorkWithMe',
+        'event_label': method,
+        'value': 1
+      });
+    }
+  </script>
+
+  <style>
+    :root {
+      --ground: #EFF2F1;
+      --surface: #FBFCFB;
+      --line: #D3DAD8;
+      --ink: #0E1A1D;
+      --body: #2A3A3D;
+      --muted: #5E7071;
+      --accent: #2A7263;
+      --accent-quiet: #DCE9E5;
+
+      --display: "Palatino Linotype", "Book Antiqua", Palatino, "Iowan Old Style", Georgia, serif;
+      --sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+      --mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --ground: #0D1517;
+        --surface: #141F22;
+        --line: #26383B;
+        --ink: #EAF0EE;
+        --body: #C3D0CE;
+        --muted: #839897;
+        --accent: #5FB6A0;
+        --accent-quiet: #1B2E2C;
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --ground: #0D1517;
+      --surface: #141F22;
+      --line: #26383B;
+      --ink: #EAF0EE;
+      --body: #C3D0CE;
+      --muted: #839897;
+      --accent: #5FB6A0;
+      --accent-quiet: #1B2E2C;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--ground);
+      color: var(--body);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: clamp(2rem, 6vw, 4rem) clamp(1.1rem, 4vw, 2rem) 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(2.2rem, 5vw, 3rem);
+    }
+
+    a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+    a:hover, a:focus { border-bottom-color: var(--accent); }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    /* masthead */
+    .lockup { display: flex; align-items: center; gap: 0.8rem; }
+    .lockup svg { width: 42px; height: 42px; flex: none; color: var(--ink); }
+    .lockup-type { display: flex; flex-direction: column; line-height: 1.05; }
+    .lockup-name {
+      font-family: var(--display);
+      font-size: 1.25rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .lockup-sub {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1 {
+      font-family: var(--display);
+      font-size: clamp(1.9rem, 5vw, 2.6rem);
+      line-height: 1.15;
+      color: var(--ink);
+      font-weight: 600;
+      text-wrap: balance;
+      margin-top: 1.4rem;
+    }
+    .lede { font-size: clamp(1.02rem, 2vw, 1.12rem); max-width: 60ch; margin-top: 0.8rem; }
+
+    h2 {
+      font-family: var(--display);
+      font-size: 1.35rem;
+      color: var(--ink);
+      font-weight: 600;
+      margin-bottom: 0.9rem;
+    }
+
+    section { border-top: 1px solid var(--line); padding-top: clamp(1.6rem, 3vw, 2rem); }
+    section.plain { border-top: none; padding-top: 0; }
+
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .service { background: var(--surface); padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.35rem; }
+    .service h3 { font-size: 0.97rem; color: var(--ink); font-weight: 600; }
+    .service p { font-size: 0.9rem; color: var(--muted); }
+
+    .work { display: flex; flex-direction: column; gap: 1rem; }
+    .item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .item .what { color: var(--ink); font-weight: 600; }
+    .item .detail { font-size: 0.93rem; }
+    .item .tag {
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .how { display: flex; flex-direction: column; gap: 0.7rem; }
+    .how p { max-width: 62ch; }
+
+    .cta { background: var(--accent-quiet); border-left: 3px solid var(--accent); padding: 1.3rem 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    .cta h2 { margin-bottom: 0; }
+    .cta p { max-width: 58ch; color: var(--ink); }
+    .cta-links { display: flex; flex-wrap: wrap; gap: 1.2rem; font-family: var(--mono); font-size: 0.9rem; margin-top: 0.3rem; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding-top: 1.4rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.4rem;
+      justify-content: space-between;
+    }
+    footer .nav { display: flex; gap: 1.2rem; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="plain">
+      <a class="lockup" href="/" aria-label="Skylitsis Labs, back to home" style="border:none">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <g stroke="currentColor" stroke-width="5" fill="none">
+            <line x1="46.42" y1="25.16" x2="27.60" y2="62.79"/>
+            <line x1="53.58" y1="25.16" x2="72.40" y2="62.79"/>
+            <line x1="28" y1="78" x2="63" y2="78"/>
+          </g>
+          <g fill="currentColor">
+            <path d="M23.58 70.84 L23.13 60.55 L32.07 65.03 Z"/>
+            <path d="M76.42 70.84 L76.87 60.55 L67.93 65.03 Z"/>
+            <path d="M72 78 L63 73 L63 83 Z"/>
+            <circle cx="50" cy="18" r="8"/>
+            <circle cx="20" cy="78" r="8"/>
+            <circle cx="80" cy="78" r="8"/>
+          </g>
+        </svg>
+        <span class="lockup-type">
+          <span class="lockup-name">Skylitsis</span>
+          <span class="lockup-sub">Labs</span>
+        </span>
+      </a>
+
+      <h1>I build AI systems that make it into production.</h1>
+      <p class="lede">
+        Independent AI engineering, from Amsterdam. Mostly retrieval-augmented and LLM systems at the
+        moment: the ones that work in a demo and then have to survive real documents, real users and
+        someone else maintaining them.
+      </p>
+    </header>
+
+    <section>
+      <h2>What I do</h2>
+      <div class="services">
+        <div class="service">
+          <h3>RAG and LLM systems</h3>
+          <p>Retrieval that returns the right thing. Evaluation so you can tell when it stops.</p>
+        </div>
+        <div class="service">
+          <h3>ML into production</h3>
+          <p>Models out of notebooks and into something that runs, is monitored, and can be handed over.</p>
+        </div>
+        <div class="service">
+          <h3>Data pipelines</h3>
+          <p>Scraping, extraction and preparation, built to keep working after you stop watching it.</p>
+        </div>
+        <div class="service">
+          <h3>Diagnosis</h3>
+          <p>A short paid look at a system that is not doing what it should, before anyone commits to a rebuild.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Some things I have shipped</h2>
+      <div class="work">
+        <div class="item">
+          <span class="tag">Production</span>
+          <span class="what">A prediction model running in production</span>
+          <span class="detail">Plus the internal and external dashboards around it, and a Telegram bot for the people who were not going to open a dashboard.</span>
+        </div>
+        <div class="item">
+          <span class="tag">Performance</span>
+          <span class="what">A scraper taken from 60% to 99% accuracy, and 7x faster</span>
+          <span class="detail">Same job, an order of magnitude less babysitting.</span>
+        </div>
+        <div class="item">
+          <span class="tag">Open source</span>
+          <span class="what">canvas-dl</span>
+          <span class="detail">A tool for bulk-downloading Canvas course material, built because the alternative was clicking. <a href="https://github.com/iasonsky/canvas-dl">Source</a>.</span>
+        </div>
+        <div class="item">
+          <span class="tag">Under pressure</span>
+          <span class="what">Two hackathons, two working products</span>
+          <span class="detail">Building something real in 48 hours is the closest analogue to an urgent fix there is.</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Where I come from</h2>
+      <div class="how">
+        <p>
+          MSc Artificial Intelligence at the University of Amsterdam, with a thesis on few-shot
+          segmentation of CT scans at Amsterdam UMC. Before that, a computer science background and
+          several years of building data-driven services for companies rather than for papers.
+        </p>
+        <p>
+          The research side is real and I keep it up, but the reason people hire me is the other half:
+          I ship. See <a href="/build/">what I build</a> or the
+          <a href="/">research and writing</a>.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>How it works</h2>
+      <div class="how">
+        <p>
+          Per project, with a defined deliverable, rather than an open-ended block of hours. For
+          anything unfamiliar or already broken, I would rather start with a short paid diagnosis than
+          quote a fix blind. It is cheaper for you and more honest than a guess.
+        </p>
+        <p>
+          I work remotely, on my own equipment, and I am straightforward about what I do not know yet.
+          Rates on request, and they depend on the shape of the work.
+        </p>
+      </div>
+    </section>
+
+    <div class="cta">
+      <h2>Get in touch</h2>
+      <p>
+        If you have a system that nearly works, or an idea that needs someone to actually build it,
+        tell me what it is and what it is supposed to do. I will tell you honestly whether I am the
+        right person for it.
+      </p>
+      <div class="cta-links">
+        <!-- Swap to hello@ on the business domain once it exists -->
+        <a href="mailto:iason.sky@gmail.com" onclick="trackContact('email')">email</a>
+        <a href="https://www.linkedin.com/in/iason-sky/" onclick="trackContact('linkedin')">linkedin</a>
+        <a href="https://github.com/iasonsky" onclick="trackContact('github')">github</a>
+      </div>
+    </div>
+
+    <footer>
+      <span>Skylitsis Labs &middot; Amsterdam</span>
+      <span class="nav">
+        <a href="/">home</a>
+        <a href="/build/">build</a>
+      </span>
+    </footer>
+
+  </div>
+</body>
+</html>
